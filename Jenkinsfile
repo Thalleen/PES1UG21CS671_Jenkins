@@ -5,11 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    sh 'PES1UG21CS671-1'
                     // Compile the .cpp file using shell script
-                    sh 'g++ -o output_file /main/test.cpp'
+                    sh 'g++ /main/test.cpp -o output'
                     
-                    // Build YOUR_SRN-1 (if necessary)
-                    sh 'make PES1UG21CS671-1'
+                    
+                    
                 }
             }
         }
@@ -18,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Print the output of the .cpp file using shell script
-                    sh './output_file'
+                    sh './output'
                 }
             }
         }
