@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Compile the .cpp file using shell script
-                    sh 'g++ -o output_file test.cpp'
+                    sh 'g++ -o output_file /main/test.cpp'
                     
                     // Build YOUR_SRN-1 (if necessary)
                     sh 'make PES1UG21CS671-1'
